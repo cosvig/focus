@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drill Practice With Active Recall | You Are One Step Closer To Photographic Memory</title>
+    <link rel="shortcut icon" sizes="32x32" href="./assets/img/favicon.ico?v=2026-04">
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+	<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=2026-04" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/canvas.css?v=2026-04" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/custom.css?v=2026-04" type="text/css" media="all">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="d-flex align-items-center">
+            <button class="btn btn-link mobile-menu-btn p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
+                <i class="fas fa-bars fs-5"></i>
+            </button>
+            <a href="#" class="logo">
+                <i class="fas fa-futbol"></i>
+                demo
+            </a>
+        </div>
+
+        <div class="header-actions">
+            <!--<img src="https://picsum.photos/seed/user123/36/36.jpg" alt="User" class="user-avatar">-->
+        </div>
+    </header>
+
+    <div class="layout-container">
+        <!-- Sidebar Left -->
+        <aside class="sidebar-left d-none d-lg-block">
+            <ul class="sidebar-nav">
+               <!-- <li>
+                    <a href="./" class="sidebar-nav-item active">
+                        <i class="fas fa-home"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="canvas.html" class="sidebar-nav-item ">
+                        <i class="fas fa-comment"></i>
+                        Canvas
+                    </a>
+                </li>
+                <li>
+                    <a href="scores.html" class="sidebar-nav-item ">
+                        <i class="fas fa-star"></i>
+                        Scores
+                    </a>
+                </li>-->
+                
+            </ul>
+            
+
+        </aside>
+
+        <!-- Mobile Offcanvas Sidebar -->
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="sidebarOffcanvasLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body p-0">
+                <ul class="sidebar-nav">
+                    <!--<li>
+                        <a href="./" class="sidebar-nav-item active">
+                            <i class="fas fa-home"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="canvas.html" class="sidebar-nav-item ">
+                            <i class="fas fa-comment"></i>
+                            Canvas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="scores.html" class="sidebar-nav-item ">
+                            <i class="fas fa-star"></i>
+                            Scores
+                        </a>
+                    </li>-->
+                </ul>
+                
+
+            </div>
+        </div>
+
+        <!-- Main Content Wrapper -->
+        <div class="main-content-wrapper">
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Quick Access -->
+                <section id="quickAcecess" class="quick-access">
+					<div class="quick-title-col">
+						
+						<h2 class="section-title"><i class="fas fa-bolt" style="color: #3b82f6; margin-right: 8px;"></i> Quick Access</h2>
+						<div class="search-bar">
+							<input type="text" name="searchgroup" id="searchgroup" placeholder="Search files..." autocomplete="off">
+							<i class="fas fa-search"></i>
+						</div>
+					</div>
+                    <div id="allfocusgrouplist" class="quick-access-cards">
+                         <div style="padding: 2rem; text-align: center; color: #6c757d;">Loading groups...</div>
+                    </div>
+                </section>
+				
+				<section id="signLog" class="" style="display:none">
+				<h2 id="groupkeytitle" class="section-title">Quick Access</h2> 
+				<div class="sign-to">
+				<input type="hidden" name="groupInput" id="groupInput">
+				<div class="jolt">
+				  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<g data-name="Layer 2">
+					  <g data-name="inbox">
+						<rect
+						  width="24"
+						  height="24"
+						  transform="rotate(180 12 12)"
+						  opacity="0"
+						></rect>
+						<path
+						  d="M20.79 11.34l-3.34-6.68A3 3 0 0 0 14.76 3H9.24a3 3 0 0 0-2.69 1.66l-3.34 6.68a2 2 0 0 0-.21.9V18a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-5.76a2 2 0 0 0-.21-.9zM8.34 5.55a1 1 0 0 1 .9-.55h5.52a1 1 0 0 1 .9.55L18.38 11H16a1 1 0 0 0-1 1v2a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-2a1 1 0 0 0-1-1H5.62z"
+						></path>
+					  </g>
+					</g>
+				  </svg>
+				  <input type="password" name="groupkey" id="groupkey" class="input" placeholder="Enter Your Group Key" autocomplete="off" />
+				  <button id="sendbutton" class="jolt-btn">
+					<svg
+					  xmlns="http://www.w3.org/2000/svg"
+					  width="30"
+					  height="10"
+					  viewBox="0 0 38 15"
+					  class="arrow"
+					>
+					  <path
+						d="M10 7.519l-.939-.344h0l.939.344zm14.386-1.205l-.981-.192.981.192zm1.276 5.509l.537.843.148-.094.107-.139-.792-.611zm4.819-4.304l-.385-.923h0l.385.923zm7.227.707a1 1 0 0 0 0-1.414L31.343.448a1 1 0 0 0-1.414 0 1 1 0 0 0 0 1.414l5.657 5.657-5.657 5.657a1 1 0 0 0 1.414 1.414l6.364-6.364zM1 7.519l.554.833.029-.019.094-.061.361-.23 1.277-.77c1.054-.609 2.397-1.32 3.629-1.787.617-.234 1.17-.392 1.623-.455.477-.066.707-.008.788.034.025.013.031.021.039.034a.56.56 0 0 1 .058.235c.029.327-.047.906-.39 1.842l1.878.689c.383-1.044.571-1.949.505-2.705-.072-.815-.45-1.493-1.16-1.865-.627-.329-1.358-.332-1.993-.244-.659.092-1.367.305-2.056.566-1.381.523-2.833 1.297-3.921 1.925l-1.341.808-.385.245-.104.068-.028.018c-.011.007-.011.007.543.84zm8.061-.344c-.198.54-.328 1.038-.36 1.484-.032.441.024.94.325 1.364.319.45.786.64 1.21.697.403.054.824-.001 1.21-.09.775-.179 1.694-.566 2.633-1.014l3.023-1.554c2.115-1.122 4.107-2.168 5.476-2.524.329-.086.573-.117.742-.115s.195.038.161.014c-.15-.105.085-.139-.076.685l1.963.384c.192-.98.152-2.083-.74-2.707-.405-.283-.868-.37-1.28-.376s-.849.069-1.274.179c-1.65.43-3.888 1.621-5.909 2.693l-2.948 1.517c-.92.439-1.673.743-2.221.87-.276.064-.429.065-.492.057-.043-.006.066.003.155.127.07.099.024.131.038-.063.014-.187.078-.49.243-.94l-1.878-.689zm14.343-1.053c-.361 1.844-.474 3.185-.413 4.161.059.95.294 1.72.811 2.215.567.544 1.242.546 1.664.459a2.34 2.34 0 0 0 .502-.167l.15-.076.049-.028.018-.011c.013-.008.013-.008-.524-.852l-.536-.844.019-.012c-.038.018-.064.027-.084.032-.037.008.053-.013.125.056.021.02-.151-.135-.198-.895-.046-.734.034-1.887.38-3.652l-1.963-.384zm2.257 5.701l.791.611.024-.031.08-.101.311-.377 1.093-1.213c.922-.954 2.005-1.894 2.904-2.27l-.771-1.846c-1.31.547-2.637 1.758-3.572 2.725l-1.184 1.314-.341.414-.093.117-.025.032c-.01.013-.01.013.781.624zm5.204-3.381c.989-.413 1.791-.42 2.697-.307.871.108 2.083.385 3.437.385v-2c-1.197 0-2.041-.226-3.19-.369-1.114-.139-2.297-.146-3.715.447l.771 1.846z"
+					  ></path></svg
+					><i class="fa fa-sign-in"></i>
+				  </button>
+				</div>
+				</div>
+
+				</section>
+
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb" style="display:none">
+                    <ol class="breadcrumb breadcrumb-custom">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Concept Font</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Maszeh</li>
+                    </ol>
+                </nav>
+
+                <!-- File Table -->
+                <section class="file-table-container" style="display:none">
+                    <table class="file-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Sharing</th>
+                                <th>Size</th>
+                                <th>Modified</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="file-name">
+                                        <i class="fas fa-folder file-icon folder-icon"></i>
+                                        <span>Docs</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="sharing-avatars">
+                                        <img src="https://picsum.photos/seed/user1/28/28.jpg" alt="User" class="sharing-avatar">
+                                        <img src="https://picsum.photos/seed/user2/28/28.jpg" alt="User" class="sharing-avatar">
+                                    </div>
+                                </td>
+                                <td>2.4 MB</td>
+                                <td>2 days ago</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="file-name">
+                                        <i class="fas fa-folder file-icon folder-icon"></i>
+                                        <span>Source</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="sharing-badge">
+                                        <i class="fas fa-globe"></i>
+                                        Public
+                                    </span>
+                                </td>
+                                <td>1.2 MB</td>
+                                <td>Yesterday</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="file-name">
+                                        <i class="fas fa-file-alt file-icon"></i>
+                                        <span>OFL.txt</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="sharing-avatars">
+                                        <img src="https://picsum.photos/seed/user3/28/28.jpg" alt="User" class="sharing-avatar">
+                                    </div>
+                                </td>
+                                <td>12 KB</td>
+                                <td>3 days ago</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="file-name">
+                                        <i class="fas fa-file-archive file-icon"></i>
+                                        <span>Fonts.zip</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="sharing-avatars">
+                                        <img src="https://picsum.photos/seed/user4/28/28.jpg" alt="User" class="sharing-avatar">
+                                        <img src="https://picsum.photos/seed/user5/28/28.jpg" alt="User" class="sharing-avatar">
+                                        <img src="https://picsum.photos/seed/user6/28/28.jpg" alt="User" class="sharing-avatar">
+                                    </div>
+                                </td>
+                                <td>8.7 MB</td>
+                                <td>Last week</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="file-name">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span>Logo.png</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="sharing-badge">
+                                        <i class="fas fa-globe"></i>
+                                        Public
+                                    </span>
+                                </td>
+                                <td>245 KB</td>
+                                <td>2 weeks ago</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="file-name">
+                                        <i class="fas fa-file-pdf file-icon"></i>
+                                        <span>Brand Guidelines.pdf</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="sharing-avatars">
+                                        <img src="https://picsum.photos/seed/user7/28/28.jpg" alt="User" class="sharing-avatar">
+                                    </div>
+                                </td>
+                                <td>3.2 MB</td>
+                                <td>Last month</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+
+        
+    </div>
+	
+	<div class="toast-container position-fixed top-0 end-0 p-3">
+	  <div class="toast align-items-center text-white vbg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+	  <div class="d-flex">
+		<div id="toastBody" class="toast-body">
+		  Hello, world! This is a toast message.
+		</div>
+		<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+	  </div>
+	</div>
+	</div>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/jquery-3.7.1.min.js"></script>
+	<script src="assets/js/dashboard.js"></script>
+</body>
+</html>
