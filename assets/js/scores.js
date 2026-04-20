@@ -50,10 +50,10 @@ function confirmUserPresence(){
 				loadScorePage()
             }else{
 				showToast('Wrong Turn', 'error');
-				removeCookies();
+				//removeCookies();
 				document.getElementById('mainAppArea').innerHTML = `Seems you have you have stumbled into an unfamiliar territory. Go back to Home to find your way.`;
 				setTimeout(function(){
-					window.location.href = "./"
+					//window.location.href = "./"
 				}, 4000);
             }
         },error : function(jqXHR, textStatus, errorThrown) {
