@@ -1,4 +1,6 @@
-// Global variables
+const fusionnet = getCookie("fusionnet");
+const selebratnet = getCookie("selebratnet");
+
 var lastAttemptedAudio = null; // Stores the file name to retry
 var activeAudioList = [];
 
@@ -40,8 +42,9 @@ function confirmUserPresence(){
         type: "POST",
         url: "https://booky.16mb.com/saintmophines/api/",
         data: {dzmhksfoh: dzmhksfoh, outrightP: outrightP},
-		xhrFields: {
-			withCredentials: true   // THIS enables cookies
+		 headers: {
+			"X-Session-Token": fusionnet,
+			"X-Session-Id": selebratnet
 		},
         success: function(data){    
            //$("#main").html(data); 
@@ -70,8 +73,9 @@ function tableliststudypapers(){
 			url: "https://booky.16mb.com/saintmophines/api/", 
 			dataType: "json",
 			data: {chgahjokvkkxg: chgahjokvkkxg},
-			xhrFields: {
-				withCredentials: true   // THIS enables cookies
+			 headers: {
+				"X-Session-Token": fusionnet,
+				"X-Session-Id": selebratnet
 			},
 			success: function(result){
 				currentstudysessions = result;
@@ -1227,4 +1231,10 @@ function removeCookies(){
     expires.setFullYear(1969, 0, 1);
 	document.cookie = `fusionnet= 0; expires=${expires.toUTCString()}; path=/`;
 	document.cookie = `selebratnet= 0; expires=${expires.toUTCString()}; path=/`;
+}
+
+function getCookie(name) {
+    const value = "; " + document.cookie;
+    const parts = value.split("; " + name + "=");
+    if (parts.length === 2) return parts.pop().split(";").shift();
 }
